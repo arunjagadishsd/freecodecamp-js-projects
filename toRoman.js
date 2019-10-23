@@ -1,18 +1,19 @@
 function convertToRoman(num) {
-    const romanNumerals = 
-        { 1000: 'M', 500: 'D', 100: 'C', 50: 'L', 10: 'X', 5: 'V',1:'I'}
-    let numbers = [1000,500,100,50,10,5,1];
+    const romanNumerals =
+    {
+        1000: 'M', 900: 'CM', 500: 'D', 400: 'DM', 100: 'C', 90: 'CX',
+        50: 'L', 40: 'XL', 10: 'X', 9: 'IX', 5: 'V', 1: 'I'
+    }
+    let numbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 1];
     let converted = '';
-    for (let i of numbers){
-        console.log(i);
-        let div = Math.floor(num/i);
+    for (let i of numbers) {
+        let div = Math.floor(num / i);
         num = num % i
-        if (div>=1){
+        if (div >= 1) {
             converted += romanNumerals[i].repeat(div);
         }
     }
-    console.log(converted);
     return converted;
 }
 
-convertToRoman(36);
+convertToRoman(49);
