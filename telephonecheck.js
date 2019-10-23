@@ -1,6 +1,8 @@
 function telephoneCheck(str) {
     // Good luck!
-    return true;
-}
+    let regex = new RegExp('^0-9]+$');
 
-telephoneCheck("555-555-5555");
+    return (regex.test(str));
+}
+console.log(telephoneCheck("555-555-5555"));
+
