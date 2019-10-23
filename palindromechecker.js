@@ -1,11 +1,13 @@
 function palindrome(str) {
     // Sanitize the string
-    let isPalindrome = false;
     str = str.replace(/[^0-9A-Z]+/gi, "").toLowerCase();
     // Check if plaindrome
-    return true;
+    reverseStr = str.split("").reverse().join("");
+    
+    return str === reverseStr;
 }
 
 
 
-palindrome("eye");
+console.log(palindrome("My age is 0, 0 si ega m"));
+ 
